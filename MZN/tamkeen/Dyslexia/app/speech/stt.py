@@ -23,7 +23,7 @@ def transcribe_audio(audio_path,language=None):
             "confidence": segment.avg_logprob 
         })
         
-        return {
+    return {
         "text": full_text.strip(),
         "segments": segments_data,
         "language": info.language,
