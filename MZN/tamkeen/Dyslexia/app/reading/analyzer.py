@@ -1,18 +1,17 @@
 from alignment import align_words
-
 from metrics import word_metrics
-
 from normalization import normalize_text
-
 from speech.stt import transcribe_audio
-
-
+from skills.evidence import infer_skill_evidence
+from recommendations.engine import get_next_recommendation
+from adaptive.engine import get_adaptive_plan
 def analyze_reading(
     expected_text,
     audio_path,
     language="en",
     time_taken=None,
-    review_threshold=0.55
+    review_threshold=0.55,
+    previous_mastery=None
 ):
 
 
@@ -71,6 +70,8 @@ def analyze_reading(
         alignment=
             alignment
     )
+    
+    
 
 
 
@@ -106,6 +107,21 @@ def analyze_reading(
                 analysis_confidence
         })
 
+    skill_updates = infer_skill_evidence(
+    metrics=metrics,
+    errors=errors,
+    target_wpm=60.0
+)
+    recommendation = get_next_recommendation(
+        skill_updates=skill_updates,
+        metrics=metrics,
+        errors=errors
+    )
+    adaptive_plan = get_adaptive_plan(
+    skill_updates=skill_updates,
+    recommendation=recommendation,
+    previous_mastery=previous_mastery
+)
 
     transcript_available = bool(
         normalized_recognized
@@ -157,9 +173,10 @@ def analyze_reading(
             errors,
 
         # We implement these next.
-        "skill_updates": [],
+        "skill_updates":skill_updates,
 
-        "recommendation": None,
+        "recommendation": recommendation,
+        "adaptive_plan":adaptive_plan,
 
         "quality": {
 
