@@ -1,3 +1,11 @@
-env\
-.venv\
-MZNenv\
+# Virtual environments
+.venv/
+MZNenv/
+env/
+venv/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
