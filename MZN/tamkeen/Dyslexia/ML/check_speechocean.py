@@ -1,62 +1,64 @@
-from datasets import load_dataset, Audio
+from pathlib import Path
+import pandas as pd
 
+def main():
+    BASE_DIR = Path(__file__).resolve().parents[1]
+    CSV_PATH = BASE_DIR / "data" / "speechocean_features_train.csv"
 
-print("STEP 1: Starting...")
+    if not CSV_PATH.exists():
+        print(f"File not found: {CSV_PATH}")
+        return
 
+    df = pd.read_csv(CSV_PATH)
 
-dataset = load_dataset(
-    "mispeech/speechocean762"
-)
+    print("==================================================")
+    print("1. DATASET SHAPE")
+    print("==================================================")
+    print(f"Rows: {len(df)}")
+    print(f"Columns: {len(df.columns)}")
 
+    print("\n==================================================")
+    print("2. MISSING VALUES")
+    print("==================================================")
+    missing = df.isna().sum()
+    missing = missing[missing > 0]
+    if len(missing) > 0:
+        print(missing.to_string())
+    else:
+        print("No missing values detected.")
 
-print("\nSTEP 2: Dataset downloaded/loaded.")
+    print("\n==================================================")
+    print("3. UNIQUE IDENTIFIERS & DUPLICATES")
+    print("==================================================")
+    print(f"Duplicate dataset_index entries: {df['dataset_index'].duplicated().sum()}")
+    print(f"Unique speakers: {df['speaker'].nunique()}")
+    
+    speaker_counts = df['speaker'].value_counts()
+    print(f"Min samples per speaker: {speaker_counts.min()}")
+    print(f"Max samples per speaker: {speaker_counts.max()}")
 
-print("\nTYPE:")
-print(type(dataset))
+    print("\n==================================================")
+    print("4. TARGET DISTRIBUTIONS (EXPERT SCORES)")
+    print("==================================================")
+    targets = ['expert_accuracy', 'expert_completeness', 'expert_fluency', 'expert_prosodic', 'expert_total']
+    # Check if targets exist in the dataframe before describing
+    available_targets = [t for t in targets if t in df.columns]
+    if available_targets:
+        print(df[available_targets].describe().T.to_string())
+    else:
+        print("Target columns not found!")
 
-print("\nFULL DATASET:")
-print(dataset)
+    print("\n==================================================")
+    print("5. PREDICTIVE FEATURE SNEAK PEEK (FIRST 5 ROWS)")
+    print("==================================================")
+    # Exclude targets and metadata for a cleaner view
+    exclude_cols = available_targets + ['dataset_index', 'speaker', 'gender', 'expected_text']
+    features = [c for c in df.columns if c not in exclude_cols]
+    
+    if features:
+        print(df[['age'] + features[:6]].head().to_string())
+    else:
+        print("No numerical features found.")
 
-
-dataset = dataset.cast_column(
-    "audio",
-    Audio(decode=False)
-)
-
-
-print("\nAVAILABLE SPLITS:")
-print(dataset.keys())
-
-
-print("\nTRAIN ROWS:")
-print(len(dataset["train"]))
-
-
-print("\nTEST ROWS:")
-print(len(dataset["test"]))
-
-
-print("\nFIRST TRAIN SAMPLE:")
-sample = dataset["train"][0]
-
-print(sample.keys())
-
-print("\nTEXT:")
-print(sample["text"])
-
-print("\nAGE:")
-print(sample["age"])
-
-print("\nAUDIO INFORMATION:")
-
-audio = sample["audio"]
-
-print("Audio path:")
-print(audio.get("path"))
-
-audio_bytes = audio.get("bytes")
-
-if audio_bytes:
-    print("Audio bytes:", len(audio_bytes))
-else:
-    print("Audio bytes: 0")
+if __name__ == "__main__":
+    main()

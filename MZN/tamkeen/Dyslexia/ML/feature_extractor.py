@@ -1,6 +1,69 @@
 import math
+import math
+import librosa
+import numpy as np
 
-
+def extract_acoustic_features(audio_path):
+    """
+    Extract lightweight acoustic features (Energy, Spectral Centroid, ZCR)
+    to help predict prosody and fluency.
+    """
+    if not audio_path:
+        return {}
+        
+    try:
+        y, sr = librosa.load(audio_path, sr=None)
+        if len(y) == 0:
+            return {}
+        
+        rms = librosa.feature.rms(y=y)[0]
+        cent = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
+        zcr = librosa.feature.zero_crossing_rate(y)[0]
+        
+        return {
+            "rms_mean": float(np.mean(rms)),
+            "rms_std": float(np.std(rms)),
+            "spectral_centroid_mean": float(np.mean(cent)),
+            "zero_crossing_rate_mean": float(np.mean(zcr))
+        }
+    except Exception:
+        return {
+            "rms_mean": 0.0,
+            "rms_std": 0.0,
+            "spectral_centroid_mean": 0.0,
+            "zero_crossing_rate_mean": 0.0
+        }
+        
+def extract_acoustic_features(audio_path):
+    """
+    Extract lightweight acoustic features (Energy, Spectral Centroid, ZCR)
+    to help predict prosody and fluency.
+    """
+    if not audio_path:
+        return {}
+        
+    try:
+        y, sr = librosa.load(audio_path, sr=None)
+        if len(y) == 0:
+            return {}
+        
+        rms = librosa.feature.rms(y=y)[0]
+        cent = librosa.feature.spectral_centroid(y=y, sr=sr)[0]
+        zcr = librosa.feature.zero_crossing_rate(y)[0]
+        
+        return {
+            "rms_mean": float(np.mean(rms)),
+            "rms_std": float(np.std(rms)),
+            "spectral_centroid_mean": float(np.mean(cent)),
+            "zero_crossing_rate_mean": float(np.mean(zcr))
+        }
+    except Exception:
+        return {
+            "rms_mean": 0.0,
+            "rms_std": 0.0,
+            "spectral_centroid_mean": 0.0,
+            "zero_crossing_rate_mean": 0.0
+        }
 def safe_divide(
     numerator,
     denominator,

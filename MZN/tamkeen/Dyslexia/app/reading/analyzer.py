@@ -153,7 +153,8 @@ def analyze_reading(
 
 
     result = {
-
+        "audio_path":
+            audio_path,
         "transcript":
             raw_transcript,
 
