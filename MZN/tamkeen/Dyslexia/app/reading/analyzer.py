@@ -1,10 +1,10 @@
-from alignment import align_words
-from metrics import word_metrics
-from normalization import normalize_text
-from speech.stt import transcribe_audio
-from skills.evidence import infer_skill_evidence
-from recommendations.engine import get_next_recommendation
-from adaptive.engine import get_adaptive_plan
+from .alignment import align_words
+from .metrics import word_metrics
+from .normalization import normalize_text
+from ..speech.stt import transcribe_audio
+from ..skills.evidence import infer_skill_evidence
+from ..recommendations.engine import get_next_recommendation
+from ..adaptive.engine import get_adaptive_plan
 def analyze_reading(
     expected_text,
     audio_path,

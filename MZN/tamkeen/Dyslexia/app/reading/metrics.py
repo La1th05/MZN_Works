@@ -1,4 +1,4 @@
-from alignment import align_words
+from .alignment import align_words
 
 
 def word_metrics(

@@ -1,3 +1,23 @@
+import os
+import sys
+
+# Force Windows to locate the cuBLAS and cuDNN DLLs dynamically inside the .venv
+if os.name == "nt":
+    # Locate the virtual environment's site-packages
+    site_packages = os.path.join(os.path.dirname(os.path.dirname(sys.executable)), "Lib", "site-packages")
+    
+    cublas_bin = os.path.join(site_packages, "nvidia", "cublas", "bin")
+    cudnn_bin = os.path.join(site_packages, "nvidia", "cudnn", "bin")
+    
+    # Register directories so CTranslate2 can load them
+    if os.path.exists(cublas_bin):
+        os.add_dll_directory(cublas_bin)
+        os.environ["PATH"] = cublas_bin + os.pathsep + os.environ.get("PATH", "")
+        
+    if os.path.exists(cudnn_bin):
+        os.add_dll_directory(cudnn_bin)
+        os.environ["PATH"] = cudnn_bin + os.pathsep + os.environ.get("PATH", "")
+
 import math
 from functools import lru_cache
 
@@ -33,27 +53,12 @@ def normalize_stt_language(language):
 
 @lru_cache(maxsize=2)
 def load_model(model_size="small"):
-
-    cuda_available = (
-        ctranslate2.get_cuda_device_count() > 0
-    )
-
-    if cuda_available:
-
-        print("Loading Whisper on GPU...")
-
-        return WhisperModel(
-            model_size,
-            device="cuda",
-            compute_type="float16"
-        )
-
-    print("Loading Whisper on CPU...")
-
+    print("Loading Whisper on CUDA...")
+    
     return WhisperModel(
         model_size,
-        device="cpu",
-        compute_type="int8"
+        device="cuda", 
+        compute_type="float16" # Use "int8_float16" if you need to save VRAM on smaller GPUs
     )
 
 
