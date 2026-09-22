@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "on-surface": "#0b1c32", "on-primary-container": "#004c46", "tertiary": "#785a00", "error-container": "#ffdad6", "error": "#ba1a1a", "secondary-container": "#ff6b6b", "outline": "#6c7a77", "on-tertiary-fixed-variant": "#5b4300", "on-primary-fixed": "#00201d", "on-primary": "#ffffff", "surface-bright": "#f9f9ff", "secondary-fixed": "#ffdad8", "surface-variant": "#d5e3ff", "tertiary-fixed": "#ffdf9b", "on-error": "#ffffff", "surface": "#f9f9ff", "on-secondary-fixed": "#410006", "tertiary-container": "#d5aa43", "primary": "#006a62", "on-secondary-container": "#6d0010", "primary-fixed-dim": "#4fdbcc", "surface-tint": "#006a62", "surface-container-low": "#f0f3ff", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#8c1520", "surface-dim": "#cbdbf9", "tertiary-fixed-dim": "#edc157", "on-surface-variant": "#3c4947", "secondary-fixed-dim": "#ffb3b0", "surface-container-high": "#dee9ff", "outline-variant": "#bbcac6", "on-tertiary-container": "#564000", "on-error-container": "#93000a", "inverse-on-surface": "#ebf1ff", "on-background": "#0b1c32", "inverse-primary": "#4fdbcc", "primary-fixed": "#70f8e8", "surface-container": "#e7eeff", "secondary": "#ae2f34", "on-tertiary-fixed": "#251a00", "surface-container-lowest": "#ffffff", "background": "#f9f9ff", "inverse-surface": "#213148", "surface-container-highest": "#d5e3ff", "primary-container": "#2ec4b6", "on-primary-fixed-variant": "#005049" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-desktop": "2rem", "gutter": "1rem", "space-lg": "1.5rem", "gutter-tablet": "1.5rem", "margin-desktop": "3rem", "margin": "1rem", "margin-tablet": "2rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-sm": ["Lexend"], "body-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Lexend"], "body-lg": ["Plus Jakarta Sans"], "label-lg": ["Lexend"], "label-md": ["Lexend"], "headline-md": ["Lexend"], "label-sm": ["Lexend"], "headline-lg": ["Lexend"], "display-lg": ["Lexend"], "body-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Lexend"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0.025em", "fontWeight": "500" }], "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.03em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "32px", "letterSpacing": "0.015em", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "42px", "letterSpacing": "0.02em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "800" }], "body-sm": ["14px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg-mobile": ["30px", { "lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "800" }] } } } }</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } .material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(11,28,50,0.05)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Tamkeen App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1VD8lAC9_xNmL41zB6Gpvi7faRV_UwOPj9jmwLZjoohg-gxbJeZ0ZlgbpB793vYXmYE9i2QoNyguf3PUlGo_ygiXk5guJwgh5OtVy9hAWQ3A_zqt3i0lU6no4tt1CTNa8iVac9rEdRB4ZIdQX7HeCvZf4iIPb4C1zmCAvzUezpICVUlpB8SNNvbVp9HPKRYrEAeUpyB3WHB52d-Uu6oDcrrwx-PcrtaNEbOMszC8F"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">Tamkeen</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">تمكين</span></div><button aria-label="Switch language" class="ml-space-xs h-11 px-space-sm rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center justify-center transition-transform active:translate-y-0.5 shadow-[0_2px_0_#bbcac6]" type="button"><span>EN | ع</span></button></div><div class="flex items-center gap-space-xs"><div class="h-11 px-space-sm rounded-full bg-surface-container-lowest shadow-[0_3px_0_#cbdbf9] flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-container text-[20px]">local_fire_department</span><span class="font-label-md text-label-md text-on-surface">5</span></div><div class="h-11 px-space-sm rounded-full bg-tertiary-fixed shadow-[0_3px_0_#edc157] flex items-center gap-1.5 text-on-tertiary-fixed"><span class="material-symbols-outlined text-tertiary text-[18px]">star</span><span class="font-label-md text-label-md">340</span></div><div class="hidden sm:flex h-11 px-space-sm rounded-full bg-primary-fixed shadow-[0_3px_0_#4fdbcc] items-center gap-1.5 text-on-primary-fixed"><span class="material-symbols-outlined text-primary text-[18px]">diamond</span><span class="font-label-md text-label-md">45</span></div></div><div class="flex items-center"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-surface-container-lowest"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute -bottom-1 -right-1 px-1.5 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-[10px] rounded-full leading-none shadow-[0_1px_2px_rgba(0,0,0,0.2)] font-bold">L7</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-28 bg-surface px-margin"><div class="flex flex-col w-full gap-y-4 select-none">
+<!-- Scaffolding & Adaptive Status Bar -->
+<div class="flex flex-col gap-2 bg-surface-container-lowest p-3 rounded-xl shadow-sm">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary">hourglass_empty</span>
+<span class="font-label-sm text-label-sm">Zen Mode • Take your time 🌱</span>
+</div>
+<div class="flex items-center gap-1 bg-tertiary-fixed px-2.5 py-1 rounded-full text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">auto_awesome</span>
+<span class="font-label-sm text-label-sm">Gentle Growth</span>
+</div>
+</div>
+<!-- Stepper Bar (Step 3 of 5) -->
+<div class="flex items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Step 3 of 5</span>
+<div class="flex-1 grid grid-cols-5 gap-1.5 h-2.5 bg-surface-container rounded-full p-0.5">
+<div class="bg-primary rounded-full"></div>
+<div class="bg-primary rounded-full"></div>
+<div class="bg-primary-container rounded-full shadow-[0_0_6px_rgba(46,196,182,0.8)]"></div>
+<div class="bg-surface-variant/70 rounded-full"></div>
+<div class="bg-surface-variant/70 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Equation & Visual Base-10 Chunking Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-4 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">psychology</span> Regrouping Quest
+      </span>
+<button class="flex items-center gap-1 text-primary font-label-sm text-label-sm bg-surface-container px-2.5 py-1 rounded-full transition-transform active:scale-95" id="toggle-blocks-btn">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span id="blocks-toggle-label">Hide visual blocks</span>
+</button>
+</div>
+<!-- Primary Equation Display -->
+<div class="flex items-center justify-center gap-3 py-1">
+<div class="bg-surface-container-high px-4 py-2 rounded-xl text-center shadow-inner">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-wider">45</span>
+</div>
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary font-extrabold">+</span>
+<div class="bg-surface-container-high px-4 py-2 rounded-xl text-center shadow-inner">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-wider">28</span>
+</div>
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface-variant">=</span>
+<div class="min-w-[84px] h-[58px] bg-tertiary-fixed/60 border-2 border-dashed border-tertiary-container rounded-xl flex items-center justify-center px-3">
+<span class="font-display-lg-mobile text-display-lg-mobile text-tertiary font-extrabold" id="equation-target-display">73</span>
+</div>
+</div>
+<!-- Dyscalculia Multi-Sensory Manipulatives -->
+<div class="bg-surface-container-low rounded-xl p-3 flex flex-col gap-3" id="visual-blocks-container">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">view_stream</span>
+          Tens Rods (4 + 2 = 6 tens)
+        </span>
+<span class="font-label-sm text-label-sm text-primary font-bold">60</span>
+</div>
+<!-- Tens Rods Visual -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex gap-1 bg-surface-container-lowest p-1.5 rounded-lg shadow-sm">
+<div class="w-3 h-10 bg-primary-container rounded-sm"></div>
+<div class="w-3 h-10 bg-primary-container rounded-sm"></div>
+<div class="w-3 h-10 bg-primary-container rounded-sm"></div>
+<div class="w-3 h-10 bg-primary-container rounded-sm"></div>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">+</span>
+<div class="flex gap-1 bg-surface-container-lowest p-1.5 rounded-lg shadow-sm">
+<div class="w-3 h-10 bg-primary-container rounded-sm"></div>
+<div class="w-3 h-10 bg-primary-container rounded-sm"></div>
+</div>
+</div>
+<!-- Units Cubes Visual -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">grain</span>
+          Ones Cubes (5 + 8 = 13 ones → 1 ten + 3 ones)
+        </span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">13</span>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex gap-1 bg-surface-container-lowest p-1.5 rounded-lg shadow-sm">
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">+</span>
+<div class="flex flex-wrap gap-1 max-w-[130px] bg-surface-container-lowest p-1.5 rounded-lg shadow-sm">
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+<div class="w-3 h-3 bg-tertiary-fixed-dim rounded-sm"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Dual Input Tabs (Tactile) -->
+<div class="flex p-1 bg-surface-container rounded-xl shadow-inner gap-1">
+<button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all" id="tab-canvas-btn">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+<span>Magic Canvas</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-1.5 py-2 rounded-lg text-on-surface-variant font-label-md text-label-md transition-all" id="tab-keypad-btn">
+<span class="material-symbols-outlined text-[18px]">dialpad</span>
+<span>Big Keypad</span>
+</button>
+</div>
+<!-- Magic Canvas Section -->
+<div class="flex flex-col gap-2" id="canvas-section">
+<!-- Recognition Pill -->
+<div class="flex items-center justify-between bg-primary-fixed/50 px-3 py-1.5 rounded-xl shadow-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-on-primary-fixed">CNN Vision Model:</span>
+<span class="bg-primary text-on-primary px-2 py-0.5 rounded-md font-label-md text-label-md font-bold" id="recognized-badge">73</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Ready
+      </span>
+</div>
+<!-- Drawing Pad Container with Dot-Grid -->
+<div class="relative w-full h-44 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm touch-none" style="background-image: radial-gradient(circle, #bbcac6 1px, transparent 1px); background-size: 16px 16px;">
+<!-- Canvas Element -->
+<canvas class="w-full h-full cursor-crosshair" id="math-pad"></canvas>
+<!-- Subdued Helper Guideline -->
+<div class="absolute inset-0 pointer-events-none flex items-center justify-center opacity-20">
+<span class="font-display-lg-mobile text-[76px] font-black text-outline">73</span>
+</div>
+<!-- Drawing Tool Overlay -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-auto">
+<div class="flex items-center gap-1 bg-surface-container-high/90 backdrop-blur-md p-1 rounded-xl shadow-sm">
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-primary text-on-primary shadow-sm active:scale-95" id="tool-pen">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant active:scale-95" id="tool-eraser">
+<span class="material-symbols-outlined text-[18px]">ink_eraser</span>
+</button>
+<button class="w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-secondary active:scale-95" id="tool-clear" title="Clear Canvas">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+<button class="w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-high/90 backdrop-blur-md text-on-surface-variant shadow-sm active:scale-95" id="tool-undo">
+<span class="material-symbols-outlined text-[18px]">undo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Keypad Section (Hidden by default, toggled via tabs) -->
+<div class="hidden flex-col gap-2 bg-surface-container-lowest p-3 rounded-2xl shadow-sm" id="keypad-section">
+<div class="grid grid-cols-3 gap-2">
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">1</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">2</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">3</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">4</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">5</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">6</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">7</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">8</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">9</button>
+<button class="h-12 bg-secondary-fixed text-secondary font-headline-sm text-headline-sm rounded-xl shadow-[0_3px_0_#ffb3b0] active:translate-y-0.5 active:shadow-[0_1px_0_#ffb3b0]" id="key-clear-btn">C</button>
+<button class="key-btn h-12 bg-surface-container-high rounded-xl text-on-surface font-headline-sm text-headline-sm shadow-[0_3px_0_#bbcac6] active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]">0</button>
+<button class="h-12 bg-surface-container text-on-surface-variant font-headline-sm text-headline-sm rounded-xl shadow-[0_3px_0_#bbcac6] flex items-center justify-center active:translate-y-0.5 active:shadow-[0_1px_0_#bbcac6]" id="key-back-btn">
+<span class="material-symbols-outlined text-[22px]">backspace</span>
+</button>
+</div>
+</div>
+<!-- Scaffold Mascot & Clue Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-3 shadow-sm flex items-start gap-3">
+<!-- Nour Mascot Placeholder -->
+<div class="relative shrink-0">
+<img class="w-14 h-14 rounded-2xl object-cover shadow-sm bg-primary-fixed" data-alt="Nour the gentle wise turquoise owl wearing warm round glowing amber spectacles, smiling supportively, soft 3D stylized illustration on clean light pastel background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaQWlbS8f4DeN3FbqGauqb142B6ElFWGPMOPRq3PcoqiUNxAp8Y_eXS615nzyUB5ZNqigWekWAGyqB6_YGdYOKqBloyxV0QxpMRvEFWBSUVqjVnCFSO3eYg51VxCpNP8qfyZCpbfkIXoU-jAPXEPBkF16bj5Drr9NHbdRIfX-DsDeoYXlivmdqTHS895ZeI8GbsL7MLBvlxtr9u6mTJZrmP-OFoy-hWxcj_aatso9d"/>
+<div class="absolute -top-1 -right-1 w-5 h-5 bg-tertiary-container rounded-full flex items-center justify-center text-on-tertiary shadow-sm">
+<span class="material-symbols-outlined text-[13px]">lightbulb</span>
+</div>
+</div>
+<!-- Clue Content Tier -->
+<div class="flex-1 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">Nour's Friendly Hint</span>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95" id="clue-audio-btn" title="Listen to Hint">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-2 rounded-xl">
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="text-primary">Step 1:</strong> Try adding the tens first: 40 + 20 = <span class="font-bold text-primary">60</span>!
+        </p>
+</div>
+<button class="text-left font-label-sm text-label-sm text-on-surface-variant underline flex items-center gap-1 mt-0.5" id="reveal-hint-two">
+<span>Need next clue?</span>
+<span class="material-symbols-outlined text-[14px]">expand_more</span>
+</button>
+<div class="hidden bg-tertiary-fixed/40 p-2 rounded-xl" id="hint-two-content">
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="text-tertiary">Step 2:</strong> Add the ones: 5 + 8 = 13. Now put them together: 60 + 13 = <strong class="text-tertiary">?</strong>
+</p>
+</div>
+</div>
+</div>
+<!-- Primary Action & Brain Break Bar -->
+<div class="flex flex-col gap-2 pt-1">
+<!-- Big 2.5D Tactile Submit Button -->
+<button class="w-full h-14 bg-primary text-on-primary rounded-2xl font-headline-sm text-headline-sm flex items-center justify-center gap-2 shadow-[0_5px_0_#004c46] transition-transform active:translate-y-1 active:shadow-[0_1px_0_#004c46]" id="submit-answer-btn">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+<span>Check Answer • تحقق</span>
+</button>
+<!-- Soothing Brain Break Button -->
+<button class="w-full h-10 bg-surface-container-high text-on-surface-variant rounded-xl font-label-md text-label-md flex items-center justify-center gap-2 transition-transform active:scale-[0.99]" id="brain-break-btn">
+<span class="material-symbols-outlined text-[18px] text-primary">self_improvement</span>
+<span>Take a Calm Breathing Break</span>
+</button>
+</div>
+<!-- Micro-Feedback Modal Dialog (Hidden by Default) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm" id="feedback-modal">
+<div class="bg-surface-container-lowest rounded-3xl p-5 max-w-xs w-full shadow-2xl flex flex-col items-center text-center gap-3 animate-bounce-once">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary shadow-inner">
+<span class="material-symbols-outlined text-[36px]">workspace_premium</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">Brilliant Work!</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">You regrouped 45 + 28 = 73 smoothly! 30 Star Coins earned.</p>
+<div class="flex items-center gap-1 text-tertiary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-[20px]">star</span> +30 Stars
+      </div>
+<button class="w-full h-12 bg-primary-container text-on-primary-container font-headline-sm text-headline-sm rounded-xl shadow-[0_4px_0_#004c46] active:translate-y-0.5 mt-2" id="close-modal-btn">
+        Next Adventure →
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function initMathLab() {
+    const canvas = document.getElementById('math-pad');
+    const ctx = canvas.getContext('2d');
+    const recognizedBadge = document.getElementById('recognized-badge');
+    const eqTargetDisplay = document.getElementById('equation-target-display');
+    const tabCanvasBtn = document.getElementById('tab-canvas-btn');
+    const tabKeypadBtn = document.getElementById('tab-keypad-btn');
+    const canvasSection = document.getElementById('canvas-section');
+    const keypadSection = document.getElementById('keypad-section');
+    const toggleBlocksBtn = document.getElementById('toggle-blocks-btn');
+    const visualBlocksContainer = document.getElementById('visual-blocks-container');
+    const blocksToggleLabel = document.getElementById('blocks-toggle-label');
+    const revealHintTwo = document.getElementById('reveal-hint-two');
+    const hintTwoContent = document.getElementById('hint-two-content');
+    const submitAnswerBtn = document.getElementById('submit-answer-btn');
+    const feedbackModal = document.getElementById('feedback-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const toolPen = document.getElementById('tool-pen');
+    const toolEraser = document.getElementById('tool-eraser');
+    const toolClear = document.getElementById('tool-clear');
+
+    let isDrawing = false;
+    let strokes = [];
+    let currentStroke = [];
+    let currentTool = 'pen';
+
+    // Resize canvas safely
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+      drawSampleStroke();
+    }
+
+    // Default friendly sample stroke "73"
+    function drawSampleStroke() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.strokeStyle = '#006a62';
+      ctx.lineWidth = 5;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+
+      const cx = canvas.width / 2;
+      const cy = canvas.height / 2;
+
+      // Draw "7"
+      ctx.beginPath();
+      ctx.moveTo(cx - 50, cy - 25);
+      ctx.lineTo(cx - 15, cy - 25);
+      ctx.lineTo(cx - 30, cy + 30);
+      ctx.stroke();
+
+      // Draw "3"
+      ctx.beginPath();
+      ctx.arc(cx + 25, cy - 10, 15, Math.PI * 1.2, Math.PI * 0.2);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.arc(cx + 25, cy + 12, 17, Math.PI * 1.8, Math.PI * 0.85);
+      ctx.stroke();
+    }
+
+    // Interactive Drawing Handlers
+    function getPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: clientX - rect.left,
+        y: clientY - rect.top
+      };
+    }
+
+    function startDraw(e) {
+      isDrawing = true;
+      const pos = getPos(e);
+      currentStroke = [pos];
+      ctx.beginPath();
+      ctx.moveTo(pos.x, pos.y);
+      ctx.strokeStyle = currentTool === 'eraser' ? '#ffffff' : '#006a62';
+      ctx.lineWidth = currentTool === 'eraser' ? 18 : 5;
+      ctx.lineCap = 'round';
+    }
+
+    function moveDraw(e) {
+      if (!isDrawing) return;
+      const pos = getPos(e);
+      currentStroke.push(pos);
+      ctx.lineTo(pos.x, pos.y);
+      ctx.stroke();
+      if (e.cancelable) e.preventDefault();
+    }
+
+    function endDraw() {
+      if (isDrawing) {
+        isDrawing = false;
+        strokes.push({ tool: currentTool, points: currentStroke });
+        recognizedBadge.textContent = '73';
+        eqTargetDisplay.textContent = '73';
+      }
+    }
+
+    canvas.addEventListener('mousedown', startDraw);
+    canvas.addEventListener('mousemove', moveDraw);
+    window.addEventListener('mouseup', endDraw);
+
+    canvas.addEventListener('touchstart', startDraw, { passive: false });
+    canvas.addEventListener('touchmove', moveDraw, { passive: false });
+    window.addEventListener('touchend', endDraw);
+
+    // Tools
+    toolPen.addEventListener('click', () => {
+      currentTool = 'pen';
+      toolPen.className = 'w-9 h-9 flex items-center justify-center rounded-lg bg-primary text-on-primary shadow-sm active:scale-95';
+      toolEraser.className = 'w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant active:scale-95';
+    });
+
+    toolEraser.addEventListener('click', () => {
+      currentTool = 'eraser';
+      toolEraser.className = 'w-9 h-9 flex items-center justify-center rounded-lg bg-primary text-on-primary shadow-sm active:scale-95';
+      toolPen.className = 'w-9 h-9 flex items-center justify-center rounded-lg bg-surface-container text-on-surface-variant active:scale-95';
+    });
+
+    toolClear.addEventListener('click', () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      recognizedBadge.textContent = '?';
+      eqTargetDisplay.textContent = '?';
+      strokes = [];
+    });
+
+    // Tab Toggle
+    tabCanvasBtn.addEventListener('click', () => {
+      tabCanvasBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      tabCanvasBtn.classList.remove('text-on-surface-variant');
+      tabKeypadBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      tabKeypadBtn.classList.add('text-on-surface-variant');
+      canvasSection.classList.remove('hidden');
+      keypadSection.classList.add('hidden');
+      resizeCanvas();
+    });
+
+    tabKeypadBtn.addEventListener('click', () => {
+      tabKeypadBtn.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      tabKeypadBtn.classList.remove('text-on-surface-variant');
+      tabCanvasBtn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+      tabCanvasBtn.classList.add('text-on-surface-variant');
+      canvasSection.classList.add('hidden');
+      keypadSection.classList.remove('hidden');
+    });
+
+    // Keypad entries
+    document.querySelectorAll('.key-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = btn.innerText.trim();
+        if (eqTargetDisplay.textContent === '?' || eqTargetDisplay.textContent === '73') {
+          eqTargetDisplay.textContent = val;
+        } else if (eqTargetDisplay.textContent.length < 3) {
+          eqTargetDisplay.textContent += val;
+        }
+        recognizedBadge.textContent = eqTargetDisplay.textContent;
+      });
+    });
+
+    document.getElementById('key-clear-btn').addEventListener('click', () => {
+      eqTargetDisplay.textContent = '?';
+      recognizedBadge.textContent = '?';
+    });
+
+    document.getElementById('key-back-btn').addEventListener('click', () => {
+      let t = eqTargetDisplay.textContent;
+      if (t.length > 1 && t !== '?') {
+        eqTargetDisplay.textContent = t.slice(0, -1);
+      } else {
+        eqTargetDisplay.textContent = '?';
+      }
+      recognizedBadge.textContent = eqTargetDisplay.textContent;
+    });
+
+    // Visual Blocks Toggle
+    toggleBlocksBtn.addEventListener('click', () => {
+      const isHidden = visualBlocksContainer.classList.toggle('hidden');
+      blocksToggleLabel.textContent = isHidden ? 'Show visual blocks' : 'Hide visual blocks';
+    });
+
+    // Reveal Hint 2
+    revealHintTwo.addEventListener('click', () => {
+      hintTwoContent.classList.toggle('hidden');
+    });
+
+    // Submit Answer Confirmation
+    submitAnswerBtn.addEventListener('click', () => {
+      feedbackModal.classList.remove('hidden');
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      feedbackModal.classList.add('hidden');
+    });
+
+    // Initial canvas setup
+    window.addEventListener('load', resizeCanvas);
+    setTimeout(resizeCanvas, 50);
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(11,28,50,0.06)] rounded-t-[28px]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="adventure-map" href="#"><span class="material-symbols-outlined text-[26px]">explore</span><span class="font-label-sm text-label-sm mt-0.5">Adventure</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="reading-arena" href="#"><span class="material-symbols-outlined text-[26px]">menu_book</span><span class="font-label-sm text-label-sm mt-0.5">Reading</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs transition-transform active:scale-95 text-primary font-bold" data-path="math-lab" href="#"><span class="material-symbols-outlined text-[26px]">calculate</span><span class="font-label-sm text-label-sm mt-0.5">Math Lab</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="trophy-room" href="#"><span class="material-symbols-outlined text-[26px]">military_tech</span><span class="font-label-sm text-label-sm mt-0.5">Trophies</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="guardian-hub" href="#"><span class="material-symbols-outlined text-[26px]">shield_person</span><span class="font-label-sm text-label-sm mt-0.5">Guardian</span></a></div></nav></body></html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,400..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "on-surface": "#0b1c32", "on-primary-container": "#004c46", "tertiary": "#785a00", "error-container": "#ffdad6", "error": "#ba1a1a", "secondary-container": "#ff6b6b", "outline": "#6c7a77", "on-tertiary-fixed-variant": "#5b4300", "on-primary-fixed": "#00201d", "on-primary": "#ffffff", "surface-bright": "#f9f9ff", "secondary-fixed": "#ffdad8", "surface-variant": "#d5e3ff", "tertiary-fixed": "#ffdf9b", "on-error": "#ffffff", "surface": "#f9f9ff", "on-secondary-fixed": "#410006", "tertiary-container": "#d5aa43", "primary": "#006a62", "on-secondary-container": "#6d0010", "primary-fixed-dim": "#4fdbcc", "surface-tint": "#006a62", "surface-container-low": "#f0f3ff", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#8c1520", "surface-dim": "#cbdbf9", "tertiary-fixed-dim": "#edc157", "on-surface-variant": "#3c4947", "secondary-fixed-dim": "#ffb3b0", "surface-container-high": "#dee9ff", "outline-variant": "#bbcac6", "on-tertiary-container": "#564000", "on-error-container": "#93000a", "inverse-on-surface": "#ebf1ff", "on-background": "#0b1c32", "inverse-primary": "#4fdbcc", "primary-fixed": "#70f8e8", "surface-container": "#e7eeff", "secondary": "#ae2f34", "on-tertiary-fixed": "#251a00", "surface-container-lowest": "#ffffff", "background": "#f9f9ff", "inverse-surface": "#213148", "surface-container-highest": "#d5e3ff", "primary-container": "#2ec4b6", "on-primary-fixed-variant": "#005049" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-desktop": "2rem", "gutter": "1rem", "space-lg": "1.5rem", "gutter-tablet": "1.5rem", "margin-desktop": "3rem", "margin": "1rem", "margin-tablet": "2rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-sm": ["Lexend"], "body-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Lexend"], "body-lg": ["Plus Jakarta Sans"], "label-lg": ["Lexend"], "label-md": ["Lexend"], "headline-md": ["Lexend"], "label-sm": ["Lexend"], "headline-lg": ["Lexend"], "display-lg": ["Lexend"], "body-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Lexend"] }, "fontSize": { "headline-sm": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0.025em", "fontWeight": "500" }], "label-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0.03em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.03em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "32px", "letterSpacing": "0.015em", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "42px", "letterSpacing": "0.02em", "fontWeight": "700" }], "display-lg": ["40px", { "lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "800" }], "body-sm": ["14px", { "lineHeight": "22px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-lg-mobile": ["30px", { "lineHeight": "40px", "letterSpacing": "0.02em", "fontWeight": "800" }] } } } }</script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } .material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_4px_20px_rgba(11,28,50,0.05)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Tamkeen App Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1VD8lAC9_xNmL41zB6Gpvi7faRV_UwOPj9jmwLZjoohg-gxbJeZ0ZlgbpB793vYXmYE9i2QoNyguf3PUlGo_ygiXk5guJwgh5OtVy9hAWQ3A_zqt3i0lU6no4tt1CTNa8iVac9rEdRB4ZIdQX7HeCvZf4iIPb4C1zmCAvzUezpICVUlpB8SNNvbVp9HPKRYrEAeUpyB3WHB52d-Uu6oDcrrwx-PcrtaNEbOMszC8F"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">Tamkeen</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">تمكين</span></div><button aria-label="Switch language" class="ml-space-xs h-11 px-space-sm rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center justify-center transition-transform active:translate-y-0.5 shadow-[0_2px_0_#bbcac6]" type="button"><span>EN | ع</span></button></div><div class="flex items-center gap-space-xs"><div class="h-11 px-space-sm rounded-full bg-surface-container-lowest shadow-[0_3px_0_#cbdbf9] flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary-container text-[20px]">local_fire_department</span><span class="font-label-md text-label-md text-on-surface">5</span></div><div class="h-11 px-space-sm rounded-full bg-tertiary-fixed shadow-[0_3px_0_#edc157] flex items-center gap-1.5 text-on-tertiary-fixed"><span class="material-symbols-outlined text-tertiary text-[18px]">star</span><span class="font-label-md text-label-md">340</span></div><div class="hidden sm:flex h-11 px-space-sm rounded-full bg-primary-fixed shadow-[0_3px_0_#4fdbcc] items-center gap-1.5 text-on-primary-fixed"><span class="material-symbols-outlined text-primary text-[18px]">diamond</span><span class="font-label-md text-label-md">45</span></div></div><div class="flex items-center"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-surface-container-lowest"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute -bottom-1 -right-1 px-1.5 py-0.5 bg-secondary-container text-on-secondary-container font-label-sm text-[10px] rounded-full leading-none shadow-[0_1px_2px_rgba(0,0,0,0.2)] font-bold">L7</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-28 bg-surface px-margin"><div class="flex flex-col w-full gap-space-md">
+<!-- Profile Showcase Header -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_8px_20px_rgba(11,28,50,0.06)] flex flex-col gap-space-md">
+<div class="flex items-center gap-space-md">
+<!-- Mascot Avatar with glowing glasses frame -->
+<div class="relative flex-shrink-0 w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center shadow-[0_4px_0_#bbcac6]">
+<img class="w-16 h-16 object-contain" data-alt="Cute cheerful owl mascot character with luminous glowing glasses, turquoise mint feathers, gentle golden belly, friendly smile, 3D smooth tactile render on soft pastel background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9R46ZKrcqIqnZpMnLIElP1Z9WhiGRi0AfI79-kRQ84XAbwiL8-cDep1ucbgXAv4F84TJWSkOlIq21RfajIgGUD8nbtcM60wVL9g4WJp5pYPcKVIsoqQVlMfeCj9hjIZYrwsDX0m36YPkDFoNVyW6OblyJ97fZI8n0JupFUlnHdKjIKf5h-q3mbPVOleTqdgPfXK8KGBGVjhBZ57g8ZIpxCtL6FeL9Pfy0MgO3mhb2"/>
+<div class="absolute -bottom-1 -right-1 bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full shadow-[0_2px_0_#564000] flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Lvl 7</span>
+</div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center justify-between gap-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface truncate">Explorer Zaid</h1>
+<span class="font-label-sm text-label-sm bg-primary-container/20 text-on-primary-container px-2 py-0.5 rounded-full">زيد</span>
+</div>
+<p class="font-label-md text-label-md text-primary truncate flex items-center gap-1 mt-0.5">
+<span>Junior Wordsmith & Math Scout</span>
+<span>🏹</span>
+</p>
+<div class="flex items-center gap-space-sm mt-1.5 flex-wrap">
+<div class="flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-tertiary text-[16px]">hotel_class</span>
+<span class="font-label-sm text-label-sm">340 Stars</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-primary text-[16px]">military_tech</span>
+<span class="font-label-sm text-label-sm">12 Badges</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Segmented Tab Switcher -->
+<div class="bg-surface-container-high p-1 rounded-xl grid grid-cols-3 gap-1 shadow-inner" id="gamifiedTabs">
+<button class="tab-btn py-2 px-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-[0_2px_0_#bbcac6] transition-all flex items-center justify-center gap-1 active:translate-y-0.5" data-tab="tree" type="button">
+<span class="material-symbols-outlined text-[18px]">nature</span>
+<span class="truncate">Skill Tree</span>
+</button>
+<button class="tab-btn py-2 px-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm transition-all flex items-center justify-center gap-1 active:translate-y-0.5" data-tab="badges" type="button">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span class="truncate">Badges</span>
+</button>
+<button class="tab-btn py-2 px-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm transition-all flex items-center justify-center gap-1 active:translate-y-0.5" data-tab="quests" type="button">
+<span class="material-symbols-outlined text-[18px]">bar_chart</span>
+<span class="truncate">Activity</span>
+</button>
+</div>
+</section>
+<!-- TAB 1: Visual Skill Tree Section -->
+<section class="tab-content flex flex-col gap-space-md" id="tab-tree">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_8px_20px_rgba(11,28,50,0.06)] relative overflow-hidden">
+<!-- Title row with speech bubble -->
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/30 text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Knowledge Constellation</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed px-2 py-0.5 rounded-full">Dual Mastery</span>
+</div>
+<!-- Skill Tree Canvas -->
+<div class="relative w-full bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-lg overflow-hidden">
+<!-- SVG Path Lines for Branching Tree -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none stroke-current text-outline-variant/60" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Root to Nodes -->
+<line stroke-dasharray="6 4" stroke-linecap="round" stroke-width="4" x1="50%" x2="25%" y1="92%" y2="68%"></line>
+<line stroke-dasharray="6 4" stroke-linecap="round" stroke-width="4" x1="50%" x2="75%" y1="92%" y2="68%"></line>
+<!-- Left branch -->
+<line class="text-primary-container" stroke-linecap="round" stroke-width="4" x1="25%" x2="25%" y1="68%" y2="38%"></line>
+<line stroke-dasharray="4 4" stroke-linecap="round" stroke-width="4" x1="25%" x2="25%" y1="38%" y2="12%"></line>
+<!-- Right branch -->
+<line class="text-surface-variant" stroke-linecap="round" stroke-width="4" x1="75%" x2="75%" y1="68%" y2="38%"></line>
+<line stroke-dasharray="4 4" stroke-linecap="round" stroke-width="4" x1="75%" x2="75%" y1="38%" y2="12%"></line>
+</svg>
+<!-- Top Row (Advanced Mastery) -->
+<div class="relative z-10 grid grid-cols-2 gap-space-md">
+<!-- Left: Fluency Sorcerer (In Progress) -->
+<div class="flex flex-col items-center text-center">
+<div class="relative">
+<button class="w-14 h-14 rounded-full bg-surface-container-lowest shadow-[0_4px_0_#4fdbcc] flex items-center justify-center transition-transform active:translate-y-1" type="button">
+<span class="material-symbols-outlined text-primary text-[28px]">auto_stories</span>
+</button>
+<div class="absolute -bottom-1 -right-1 bg-primary text-on-primary text-[10px] font-label-sm px-1.5 py-0.2 rounded-full">
+                68%
+              </div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold mt-1">Fluency Scout</span>
+<span class="font-body-sm text-[11px] text-primary">In Progress</span>
+</div>
+<!-- Right: Geometry Pathfinder (Locked) -->
+<div class="flex flex-col items-center text-center">
+<div class="relative">
+<div class="w-14 h-14 rounded-full bg-surface-container text-on-surface-variant/40 shadow-[0_3px_0_#cbdbf9] flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">lock</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Geometry Quest</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant/70">Unlocks Lvl 8</span>
+</div>
+</div>
+<!-- Middle Row (Unlocked Milestones) -->
+<div class="relative z-10 grid grid-cols-2 gap-space-md">
+<!-- Left: Phonics Hero -->
+<div class="flex flex-col items-center text-center">
+<div class="relative">
+<button class="w-16 h-16 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-[0_4px_0_#edc157] flex items-center justify-center transition-transform active:translate-y-1 ring-4 ring-tertiary-container/30" type="button">
+<span class="material-symbols-outlined text-[32px] text-tertiary">star</span>
+</button>
+<div class="absolute -top-1 -right-1 bg-primary text-on-primary rounded-full w-5 h-5 flex items-center justify-center text-[10px]">
+                ✓
+              </div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold mt-1">Phonics Hero</span>
+<span class="font-body-sm text-[11px] text-tertiary font-medium">Mastered</span>
+</div>
+<!-- Right: Equation Hunter -->
+<div class="flex flex-col items-center text-center">
+<div class="relative">
+<button class="w-16 h-16 rounded-full bg-surface-container-highest text-on-surface shadow-[0_4px_0_#cbdbf9] flex items-center justify-center transition-transform active:translate-y-1 ring-4 ring-surface-variant/40" type="button">
+<span class="material-symbols-outlined text-primary text-[30px]">shield</span>
+</button>
+<div class="absolute -top-1 -right-1 bg-primary text-on-primary rounded-full w-5 h-5 flex items-center justify-center text-[10px]">
+                ✓
+              </div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-bold mt-1">Equation Hunter</span>
+<span class="font-body-sm text-[11px] text-primary font-medium">Mastered</span>
+</div>
+</div>
+<!-- Root Foundation Row (Base Disciplines) -->
+<div class="relative z-10 grid grid-cols-2 gap-space-md">
+<!-- Left: Word Master Level 4 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-[0_3px_0_#cbdbf9] flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed flex-shrink-0 shadow-[0_2px_0_#4fdbcc]">
+<span class="material-symbols-outlined text-[20px]">spellcheck</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">Word Master</div>
+<div class="font-label-sm text-[11px] text-primary">Level 4 • Crystal</div>
+</div>
+</div>
+<!-- Right: Math Wizard Level 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl shadow-[0_3px_0_#cbdbf9] flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface flex-shrink-0 shadow-[0_2px_0_#cbdbf9]">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm text-on-surface truncate">Math Wizard</div>
+<div class="font-label-sm text-[11px] text-on-surface-variant">Level 3 • Sapphire</div>
+</div>
+</div>
+</div>
+<!-- Trunk Anchor (Center Root) -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="h-10 px-space-md rounded-full bg-surface-container-highest shadow-[0_3px_0_#cbdbf9] flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">spa</span>
+<span class="font-label-sm text-label-sm text-on-surface">Core Wisdom Root</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TAB 2: Badges & Rewards Collection Grid -->
+<section class="tab-content flex flex-col gap-space-md" id="tab-badges">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[24px]">workspace_premium</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Trophy Vault</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">6 of 18 Displayed</span>
+</div>
+<!-- 2x3 Grid of 2.5D Tactile Badges -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Badge 1: Golden Falcon Voice -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_6px_0_#cbdbf9] flex flex-col items-center text-center transition-transform active:translate-y-1">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed shadow-[0_4px_0_#edc157] flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-tertiary text-[36px]">record_voice_over</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Falcon Voice</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">95%+ Echo accuracy in caverns</span>
+<span class="mt-2 text-[10px] font-label-sm text-tertiary bg-tertiary-fixed px-2 py-0.5 rounded-full font-bold">GOLD MEDAL</span>
+</div>
+<!-- Badge 2: Equation Buster -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_6px_0_#cbdbf9] flex flex-col items-center text-center transition-transform active:translate-y-1">
+<div class="w-16 h-16 rounded-full bg-primary-fixed shadow-[0_4px_0_#4fdbcc] flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary text-[36px]">draw</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Equation Buster</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">20 handwritten problems solved</span>
+<span class="mt-2 text-[10px] font-label-sm text-primary font-bold bg-primary-fixed px-2 py-0.5 rounded-full">SOLVED 20</span>
+</div>
+<!-- Badge 3: 7-Day Flame -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_6px_0_#cbdbf9] flex flex-col items-center text-center transition-transform active:translate-y-1">
+<div class="relative w-16 h-16 rounded-full bg-secondary-fixed shadow-[0_4px_0_#ffb3b0] flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary-container text-[36px]">local_fire_department</span>
+<span class="absolute -top-1 -right-1 material-symbols-outlined text-tertiary text-[18px]">crown</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">7-Day Flame</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Unbroken daily learning streak</span>
+<span class="mt-2 text-[10px] font-label-sm text-secondary font-bold bg-secondary-fixed px-2 py-0.5 rounded-full">ACTIVE STREAK</span>
+</div>
+<!-- Badge 4: Zen Master -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_6px_0_#cbdbf9] flex flex-col items-center text-center transition-transform active:translate-y-1">
+<div class="w-16 h-16 rounded-full bg-surface-container-high shadow-[0_4px_0_#bbcac6] flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-primary text-[36px]">self_improvement</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Zen Master</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Took 5 mindful breath breaks</span>
+<span class="mt-2 text-[10px] font-label-sm text-on-primary-container font-bold bg-primary-container/20 px-2 py-0.5 rounded-full">CALM MIND</span>
+</div>
+<!-- Badge 5: Subitizing Ace (Locked) -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-[0_4px_0_#dee9ff] flex flex-col items-center text-center opacity-75">
+<div class="w-16 h-16 rounded-full bg-surface-container shadow-inner flex items-center justify-center mb-2 text-on-surface-variant/40">
+<span class="material-symbols-outlined text-[32px]">grain</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Subitizing Ace</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant/80 mt-0.5">Fast dot pattern sight recognition</span>
+<span class="mt-2 text-[10px] font-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">lock</span>
+<span>In Quest 8</span>
+</span>
+</div>
+<!-- Badge 6: Bilingual Champion -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_6px_0_#cbdbf9] flex flex-col items-center text-center transition-transform active:translate-y-1">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed-dim shadow-[0_4px_0_#d5aa43] flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-tertiary text-[36px]">translate</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Bilingual Champ</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">Arabic & English side quests done</span>
+<span class="mt-2 text-[10px] font-label-sm text-tertiary font-bold bg-tertiary-fixed px-2 py-0.5 rounded-full">DUAL HERO</span>
+</div>
+</div>
+</section>
+<!-- TAB 3: Whimsical Weekly Activity Chart -->
+<section class="tab-content flex flex-col gap-space-md" id="tab-quests">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_8px_20px_rgba(11,28,50,0.06)] flex flex-col gap-space-md">
+<!-- Header row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Learning Sparks</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily mindful practice</p>
+</div>
+</div>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed px-2.5 py-1 rounded-full font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+<span>195 Total Mins</span>
+</div>
+</div>
+<!-- Castle Tower / Potion Bottle Bar Chart -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm relative">
+<!-- Target Goal Dotted Line -->
+<div class="relative w-full flex items-center">
+<div class="w-full border-b border-dashed border-primary/40"></div>
+<span class="absolute right-0 -top-3 bg-surface text-primary font-label-sm text-[10px] px-2 py-0.5 rounded-full shadow-sm">
+            20m Target
+          </span>
+</div>
+<!-- Daily Bars Container -->
+<div class="grid grid-cols-7 gap-2 items-end h-44 pt-4 px-1">
+<!-- Mon: 25m -->
+<div class="flex flex-col items-center h-full justify-end gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">25m</span>
+<div class="w-full max-w-[28px] h-[55%] rounded-t-xl bg-primary-fixed shadow-[0_3px_0_#4fdbcc] flex items-center justify-center relative group">
+<span class="material-symbols-outlined text-primary text-[14px]">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">M</span>
+</div>
+<!-- Tue: 30m -->
+<div class="flex flex-col items-center h-full justify-end gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">30m</span>
+<div class="w-full max-w-[28px] h-[68%] rounded-t-xl bg-primary-fixed shadow-[0_3px_0_#4fdbcc] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[14px]">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">T</span>
+</div>
+<!-- Wed: 20m -->
+<div class="flex flex-col items-center h-full justify-end gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">20m</span>
+<div class="w-full max-w-[28px] h-[45%] rounded-t-xl bg-primary-fixed shadow-[0_3px_0_#4fdbcc] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[14px]">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">W</span>
+</div>
+<!-- Thu: 35m (Highest star peak) -->
+<div class="flex flex-col items-center h-full justify-end gap-1">
+<div class="flex items-center gap-0.5 text-tertiary">
+<span class="material-symbols-outlined text-[12px]">flare</span>
+<span class="font-label-sm text-[11px] font-bold">35m</span>
+</div>
+<div class="w-full max-w-[28px] h-[82%] rounded-t-xl bg-tertiary-fixed shadow-[0_4px_0_#edc157] flex flex-col items-center justify-start pt-1.5 ring-2 ring-tertiary/40">
+<span class="material-symbols-outlined text-tertiary text-[16px]">workspace_premium</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">T</span>
+</div>
+<!-- Fri: 25m -->
+<div class="flex flex-col items-center h-full justify-end gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">25m</span>
+<div class="w-full max-w-[28px] h-[55%] rounded-t-xl bg-primary-fixed shadow-[0_3px_0_#4fdbcc] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[14px]">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">F</span>
+</div>
+<!-- Sat: 40m (Weekend adventure) -->
+<div class="flex flex-col items-center h-full justify-end gap-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">40m</span>
+<div class="w-full max-w-[28px] h-[95%] rounded-t-xl bg-primary-fixed shadow-[0_3px_0_#4fdbcc] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[14px]">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">S</span>
+</div>
+<!-- Sun (Today): 15m active -->
+<div class="flex flex-col items-center h-full justify-end gap-1">
+<span class="font-label-sm text-[11px] text-secondary font-bold">15m</span>
+<div class="w-full max-w-[28px] h-[35%] rounded-t-xl bg-secondary-fixed shadow-[0_3px_0_#ffb3b0] flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Today</span>
+</div>
+</div>
+<!-- Banner Achievement Callout -->
+<div class="mt-2 bg-surface-container-lowest p-space-sm rounded-lg flex items-center gap-2 shadow-sm">
+<span class="text-[18px]">🎉</span>
+<span class="font-label-sm text-label-sm text-on-surface">
+            20 min/day target reached <strong>6 of 7 days</strong>! Keep shining, Zaid!
+          </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Tactile Chest Reward Claim Card -->
+<section class="bg-gradient-to-r from-primary-container/25 via-tertiary-fixed/30 to-secondary-container/20 rounded-xl p-space-md shadow-[0_8px_20px_rgba(11,28,50,0.06)] flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed shadow-[0_4px_0_#edc157] flex items-center justify-center flex-shrink-0 animate-bounce">
+<span class="material-symbols-outlined text-tertiary text-[32px]">redeem</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">READY TO UNLOCK</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Weekly Explorer Chest!</h3>
+<p class="font-body-sm text-[13px] text-on-surface-variant">Contains +50 Stars & 1 Mystery Pin</p>
+</div>
+</div>
+<!-- 2.5D Juicy Button -->
+<button class="h-12 px-space-md rounded-full bg-secondary-container text-on-secondary font-label-md text-label-md shadow-[0_4px_0_#6d0010] flex items-center gap-1.5 flex-shrink-0 transition-transform active:translate-y-1 active:shadow-[0_0px_0_#6d0010]" id="claimChestBtn" type="button">
+<span>Open</span>
+<span class="text-[16px]">🎁</span>
+</button>
+</section>
+<!-- Micro-Interactivity Script (Tab Switcher & Claim Pop) -->
+<script>
+    (function() {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const contents = {
+        tree: document.getElementById('tab-tree'),
+        badges: document.getElementById('tab-badges'),
+        quests: document.getElementById('tab-quests')
+      };
+
+      // Set initial state: show skill tree
+      function switchTab(selectedKey) {
+        tabs.forEach(btn => {
+          const isSelected = btn.getAttribute('data-tab') === selectedKey;
+          if (isSelected) {
+            btn.className = 'tab-btn py-2 px-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-[0_2px_0_#bbcac6] transition-all flex items-center justify-center gap-1 active:translate-y-0.5';
+          } else {
+            btn.className = 'tab-btn py-2 px-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm transition-all flex items-center justify-center gap-1 active:translate-y-0.5';
+          }
+        });
+
+        Object.keys(contents).forEach(key => {
+          if (key === selectedKey) {
+            contents[key].classList.remove('hidden');
+          } else {
+            contents[key].classList.add('hidden');
+          }
+        });
+      }
+
+      tabs.forEach(btn => {
+        btn.addEventListener('click', () => {
+          switchTab(btn.getAttribute('data-tab'));
+        });
+      });
+
+      // Show all on desktop/tablet or keep standard tab view
+      switchTab('tree');
+
+      // Simple delight tap feedback for chest
+      const claimBtn = document.getElementById('claimChestBtn');
+      if (claimBtn) {
+        claimBtn.addEventListener('click', () => {
+          claimBtn.innerHTML = '<span>Opened!</span> <span>✨</span>';
+          claimBtn.classList.remove('bg-secondary-container');
+          claimBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+          claimBtn.disabled = true;
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_24px_rgba(11,28,50,0.06)] rounded-t-[28px]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-sm"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="adventure-map" href="#"><span class="material-symbols-outlined text-[26px]">explore</span><span class="font-label-sm text-label-sm mt-0.5">Adventure</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="reading-arena" href="#"><span class="material-symbols-outlined text-[26px]">menu_book</span><span class="font-label-sm text-label-sm mt-0.5">Reading</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="math-lab" href="#"><span class="material-symbols-outlined text-[26px]">calculate</span><span class="font-label-sm text-label-sm mt-0.5">Math Lab</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs transition-transform active:scale-95 text-primary font-bold" data-path="trophy-room" href="#"><span class="material-symbols-outlined text-[26px]">military_tech</span><span class="font-label-sm text-label-sm mt-0.5">Trophies</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[56px] px-space-xs text-on-surface-variant transition-transform active:scale-95" data-path="guardian-hub" href="#"><span class="material-symbols-outlined text-[26px]">shield_person</span><span class="font-label-sm text-label-sm mt-0.5">Guardian</span></a></div></nav></body></html>
