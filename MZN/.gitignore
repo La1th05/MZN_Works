@@ -9,3 +9,7 @@ ENV/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# IDE & Editor settings
+.vscode/
+.idea/
